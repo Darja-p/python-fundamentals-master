@@ -7,3 +7,6 @@ Letter input: o
 Result: 4
 
 '''
+string_1 = input("insert a string: ")
+letter= input("input a letter: ")
+print(string_1.index(letter))

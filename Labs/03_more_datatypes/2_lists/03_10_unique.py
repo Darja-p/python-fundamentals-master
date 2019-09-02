@@ -6,3 +6,14 @@ unique_list = [55, 'hi', 4, 13]
 
 
 '''
+list4 = input("insert a list of value: ")
+list4 = list4.split()
+#print(list4)
+
+help_list = []
+for i in list4:
+    if list4.count(i) == 1:
+        help_list.append(i)
+
+print(help_list)
+

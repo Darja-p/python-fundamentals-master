@@ -8,3 +8,6 @@ Result: #ore python progra##ing please
 
 '''
 
+string_w = input("enter a string: ")
+symbol_= input ("enter a symbol: ")
+print(string_w.replace((string_w[0]), symbol_))
