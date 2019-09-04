@@ -6,3 +6,14 @@ user_input = "hello"
 result = {"h": 1, "e": 1, "l": 2, "o": 1}
 
 '''
+
+input1 = input("enter a string: ")
+s = list(input1)
+l = len(input1)
+dict = {}
+i = 0
+while i < l:
+    b = input1[i]
+    dict[b] = input1.count(b)
+    i = i +1
+print(dict)

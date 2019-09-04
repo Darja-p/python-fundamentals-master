@@ -8,3 +8,7 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+i = 9
+while i < 50:
+    print(i-9,i-8, i-7, i-6, i-5, i-4, i-3, i-2, i-1, i)
+    i += 10

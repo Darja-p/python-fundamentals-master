@@ -5,3 +5,5 @@ Use a for loop that demonstrates the use of the range function.
 
 '''
 
+for i in range(0, 51):
+    print(i**2)
