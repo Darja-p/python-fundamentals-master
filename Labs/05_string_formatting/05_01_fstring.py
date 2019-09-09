@@ -18,3 +18,8 @@ famous_quotes = [
     {"full_name": "Nathan Myhrvold", "quote": "Software is a gas; it expands to fill its container."},
     {"full_name": "Alan Bennett", "quote": "Standards are always out of date.  That’s what makes them standards."}
 ]
+
+for quote1 in famous_quotes:
+    q = quote1["quote"]
+    n = (quote1["full_name"]).split()
+    print(f"{q[0:-1]} - {n[1]}, {n[0]}")

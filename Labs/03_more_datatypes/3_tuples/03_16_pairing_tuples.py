@@ -17,8 +17,6 @@ numbers_l = numbers_l.split()
 print(numbers_l)
 numbers_l.sort()
 print(numbers_l)
-numbers_l=int(numbers_l)
-
 
 len1 = len(numbers_l)
 b = len1 % 2
@@ -26,13 +24,16 @@ print(b)
 if b != 0:
     numbers_l.append(0)
 print(numbers_l)
-#don't know how to solve it from here
-"""list1 = []
-i = 0
 
-while i in (0,len1):
-    list1.append(tuple(numbers_l[i,i+1]))
+list1 = []
+i = 0
+while i < len1:
+    list1.append(tuple(numbers_l[i:i+2]))
     i += 2
-print(list1) """
+print(list1)
+# another way to do with for using range with a step
+for i in range(0,len1,2):
+    list1.append(tuple(numbers_l[i:i+2]))
+print(list1)
 
 

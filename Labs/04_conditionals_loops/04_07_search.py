@@ -5,4 +5,10 @@ Use while loop to find the number - when the number is found exit the loop and p
 
 '''
 a = int(input("input a number:"))
-while a
+counter = 0
+while counter <= 1000000000:
+    if counter == a:
+        print(counter)
+        break
+    counter += 1
+

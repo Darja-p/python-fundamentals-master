@@ -19,3 +19,6 @@ sortedList = sorted(unsorted_list, key=takeSecond)
 
 # print list
 print('Sorted list:', sortedList)
+
+mytuple = ("fourth", 9)
+print(takeSecond(mytuple))
