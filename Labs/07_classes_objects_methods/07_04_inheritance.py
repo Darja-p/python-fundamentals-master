@@ -23,10 +23,10 @@ list_to_see = []
 
 
 class Movie():
-    def __init__(self, title, year):
+    def __init__(self, title, year,seen=" hasn't watched"):
         self.title = title
         self.year = year
-        self.seen = "have not seen"
+        self.seen = seen
 
     def __str__(self):
         return f"this is a movie called {self.title}, from {self.year}, which you {self.seen}"
@@ -48,12 +48,12 @@ class RomCom(Movie):
 
 
 class ActionMovie(Movie):
-    def __int__(self, title, year, seen, pg=13):
-        super().__int__(title, year, seen)
+    def __init__(self, title, year, pg=13):
+        super().__init__(title, year)
         self.pg = pg
 
     def __str__(self):
-        return f"{self.title} from the year {self.year} with the rating {self.pg}"
+        return f"{self.title} from the year {self.year} with the rating {self.pg} ,{self.seen}"
 
 pretty = Movie("Pretty woman", 1990)
 print(pretty)
@@ -67,5 +67,6 @@ print(la)
 
 mm = ActionMovie("Mad Max", 2015)
 print(mm)
+print(mm.seen)
 mm.watch_list()
 print(list_to_see)
