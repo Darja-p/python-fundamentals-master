@@ -9,11 +9,12 @@ inp = input("insert a number: ")
 inp = int(inp)
 def func1(a):
     if a % 4 == 0:
-        b = True
+        return True
     elif a % 7 == 0:
-        b = True
-    else: b = False
-    return b
+        return True
+    else:
+        return False
+
 
 print(f"NUmber is divisible by 4 or 7: {func1(inp)}")
 
