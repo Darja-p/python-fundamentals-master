@@ -8,3 +8,15 @@ the script should handle:
 Test it and make sure it does not crash when you enter incorrect values.
 
 '''
+
+try:
+    c, d = input("Please insert two numbers: ").split()
+    c = float(c)
+    d = float(d)
+    qot = c/d
+except ZeroDivisionError:
+    print ("you entered zero as second number and quotient can not be calculated")
+except ValueError:
+    print("error! please enter numbers")
+else:
+    print(qot)

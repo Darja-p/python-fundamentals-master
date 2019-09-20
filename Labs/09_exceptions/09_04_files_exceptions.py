@@ -23,3 +23,67 @@ BONUS CHALLENGE: write a custom Exception that inherits from Exception and raise
 first 100 characters of any of the files contain the string "Prince".
 
 '''
+
+with open('/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/war_and_peace.txt','r') as fin:
+    wap = fin.read()
+    x = len(list(wap))
+
+with open("/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/crime_and_punishment.txt",'w') as fin1:
+    fin1.write('   ')
+
+
+class MyException(Exception):
+    def __init__(self, value):
+        self.value = value
+    pass
+
+try:
+    """with open('/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/war_and_peace.txt', 'r') as fin:
+        wap1 = list(fin.read())"""
+    wap1 = wap[0:100]
+    with open("/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/pride_and_prejudice.txt", 'r') as fin2:
+        wap2 = list(fin2.read())
+        wap2 = wap2[0:100]
+    with open("/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/crime_and_punishment copy.txt", 'r') as fin3:
+        wap3 = list(fin3.read())
+        wap3 = wap3[0:100]
+
+    def prince(book):
+        c = "".join(book).lower()
+        d = c.count("prince")
+        if d > 0:
+            return True
+        else: False
+
+
+    if prince(wap1):
+        raise MyException("War and peace")
+    if prince(wap2):
+        raise MyException("Pride and Prejudice")
+    if prince(wap3):
+        raise MyException("Crime and Punishment")
+
+except MyException as error:
+    print("Attenzione! There is a word 'Prince' in the first 100 characters of the book", error)
+
+finally:
+    try:
+        ch = 0
+        for i in range(0,x):
+            """with open('/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/war_and_peace.txt', 'r') as fin:
+                wap1 = list(fin.read())"""
+            print(wap[ch])
+            with open("/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/pride_and_prejudice.txt",'r') as fin2:
+                wap2 = list(fin2.read())
+                print(wap2[ch])
+            with open("/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/crime_and_punishment.txt", 'r') as fin3:
+                wap3 = list(fin3.read()) #this list has three items, so program ends. should we open a copy to use the whole file?
+                print(wap3[ch])
+            ch += 1
+
+    except Exception as e:
+        print(e)
+
+
+
+
