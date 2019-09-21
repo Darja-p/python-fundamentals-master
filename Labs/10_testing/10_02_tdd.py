@@ -8,3 +8,19 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 '''
+
+def MakeLowercase(name):
+    return name.lower()
+
+
+import unittest
+
+class MyTestCase(unittest.TestCase):
+    
+    def test_MakeLowercase(self):
+        self.assertEqual(MakeLowercase("Masik"), "masik")
+        self.assertEqual(MakeLowercase("F"),"f")
+        with self.assertRaises(AttributeError):
+            MakeLowercase(123)
+
+
