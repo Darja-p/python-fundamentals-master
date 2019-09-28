@@ -9,3 +9,13 @@ TIP:
     very common. head over to SO and find a solution!
 
 '''
+
+
+import requests
+
+webpage = requests.get('https://codingnomads.co/testimonials/')
+print(webpage.text)
+
+#soup = BeautifulSoup(html_doc, 'html.parser')
+
+#print(soup.prettify())

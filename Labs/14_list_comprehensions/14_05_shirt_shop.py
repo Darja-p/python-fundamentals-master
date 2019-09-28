@@ -8,3 +8,7 @@ Then open up your online shop ;)
 
 colors = ["neon orange", "spring green"]
 sizes = ["S", "M", "L"]
+
+list_shop = [ x+", "+y for x in colors for y in sizes]
+
+print(list_shop)

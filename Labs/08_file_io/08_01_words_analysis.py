@@ -20,11 +20,14 @@ with open("words.txt",'r') as fin:
 
     print(f"shortest word is: {min((word for word in list1), key=len)}")
     print(f"longest word is: {max((word for word in list1), key=len)}")
-count1 = 0
+
+print(len(list1))
+
+"""count1 = 0
 for i in list1:
     count1 += 1
 
-print(count1)
+print(count1)"""
 
 
 

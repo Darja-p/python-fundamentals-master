@@ -17,7 +17,7 @@ while b:
     else:
         print("great! this is an integer")
         b=False
-    finally:
-        pass
+    #finally:
+        #pass
 
 
