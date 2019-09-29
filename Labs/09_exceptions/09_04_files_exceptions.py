@@ -27,6 +27,8 @@ first 100 characters of any of the files contain the string "Prince".
 import os
 path = os.environ.get('MY_PATH')
 print(path)
+cwd = os.getcwd()
+print(cwd)
 
 
 
@@ -75,16 +77,16 @@ except MyException as error:
 
 finally:
     try:
-        ch = 0
-        for i in range(0,x):
-            # Walking a directory tree and printing the names of the directories and files
-            for dirpath, dirnames, files in os.walk(f'/{path}/09_exceptions/books'):
-                print(f'Found directory: {dirpath}')
-                for file_name in files:
-                    print(file_name)
-                    with open(file_name, 'r') as fin2: # this is not working [Errno 2] No such file or directory: 'crime_and_punishment.txt'
-                        wap2 = list(fin2.read())
-                        print(wap2[ch])
+        ch = 1
+
+        # Walking a directory tree and printing the names of the directories and files
+        for dirpath, dirnames, files in os.walk(f'/{path}/09_exceptions/books'):
+            print(f'Found directory: {dirpath}')
+            for file_name in files:
+                print(file_name)
+                with open(dirpath+'/'+file_name, 'r') as fin2:
+                    wap2 = list(fin2.read())
+                    print(wap2[ch])
 
             """with open('/Users/daria/Documents/CodingNomads/Labs/09_exceptions/books/war_and_peace.txt', 'r') as fin:
                 wap1 = list(fin.read())
