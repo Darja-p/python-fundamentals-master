@@ -14,5 +14,7 @@ def takeSecond(elem):
     return elem[1]
 
 sortedList = sorted(list1, key=takeSecond)
+sortedList1 = sorted(list1, key=lambda elem: elem[-1])
 
 print(sortedList)
+print((sortedList1))
